@@ -1,0 +1,21 @@
+<h1>New Product</h1>
+
+<form>
+    <div class="form-group">
+      <label for="productName">Add Product</label>
+      {{input id="productName" class="form-control" value=productName}}
+
+      <label for="description">Description</label>
+      {{textarea id="description" class="form-control" value=description}}
+
+      <label for="image">Image URL</label>
+      {{input id="image" class="form-control" value=image}}
+
+      <label for="price">Starting price</label>
+      {{input id="price" class="form-control" value=price}}
+
+      <label for="year">Year</label>
+      {{input id="year" class="form-control" value=year}}
+    </div>
+    <button class="btn btn-primary" {{action 'add'}}>Add</button>
+  </form>

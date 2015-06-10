@@ -1,0 +1,10 @@
+<h1>Ebay</h1>
+<div class="carousel">
+   <button class="btn btn-danger" {{action 'nextPicture' -1}}>Previous</button>
+   <img {{bind-attr src=currentPicture}} >
+   <button class="btn btn-danger" {{action 'nextPicture' 1}}>Next</button>
+</div>
+{{#each product in this}}
+    <li>{{#link-to 'product' product.id}}<img {{bind-attr src=product.image}} class="thumbnail">{{product.productName}}{{/link-to}}</li>
+    <p>{{product.description}}</p>
+{{/each}}
